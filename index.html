@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/master.css">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+      <div>
+        <h1 id="clock"></h1>
+      </div>
+
+    <script>
+      var showTime = function(){
+      document.getElementById("clock").innerHTML=new Date().toLocaleTimeString();
+      }
+      setInterval(showTime, 10);
+    </script>
+  </body>
+</html>
