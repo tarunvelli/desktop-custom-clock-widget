@@ -1,0 +1,19 @@
+
+body {
+border-style:ridge;
+border-width:thick;
+border-color:#8BC34A;
+margin:0;
+background-color:#CDDC39;
+}
+#setToggle {
+background-color:#CDDC39;
+border-style:groove;
+border-color:#8BC34A;
+font-family:monospace;
+}
+h1 {
+font-family:monospace;
+color:#212121;
+font-size:20;
+}

@@ -1,5 +1,8 @@
 {
  "name":"CCW",
  "version":"0.1.0",
- "main":"main.js"
+ "main":"main.js",
+ "dependencies": {
+   "json-2-css":">=1.0.x"
+ }
 }
