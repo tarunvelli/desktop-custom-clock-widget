@@ -19,11 +19,10 @@
   "h1": {
     "font-family": "monospace",
     "color": "#FFFFFF",
-    "font-size": "12",
-    "clor": "#ababab"
+    "font-size": "36"
   },
   "bounds": {
-    "width": 100,
-    "height": 100
+    "width": 300,
+    "height": 200
   }
 }
