@@ -13,7 +13,7 @@
       <tr><td colspan="2"><h4>Body</h4></tr>
 
       <tr><td>border-style <td>:
-      <select name="body-border-style">
+      <select id="body-border-style">
         <option value="none">none</option>
         <option value="dotted">dotted</option>
         <option value="dashed">dashed</option>
@@ -27,19 +27,19 @@
         <option value="inherit">inherit</option>
       </select><br></tr>
       <tr><td>border-width <td>:
-      <select name="body-border-width">
+      <select id="body-border-width">
         <option value="thin">thin</option>
         <option value="medium">medium</option>
         <option value="thick">thick</option>
       </select><br></tr>
-      <tr><td>border-color <td>: <input type="text" name="body-border-color" value="#00cb00" size="10"><br></tr>
-      <tr><td>background-color <td>: <input type="text" name="body-background-color" value="#00ee00" size="10"><br></tr>
-      <tr><td>margin <td>: <input type="text" name="margin" value="0" size="10"><br></tr>
+      <tr><td>border-color <td>: <input type="text" id="body-border-color" value="#000000" size="10"><br></tr>
+      <tr><td>background-color <td>: <input type="text" id="body-background-color" value="#ffffff" size="10"><br></tr>
+      <tr><td>margin <td>: <input type="text" id="body-margin" value="0" size="10"><br></tr>
 
       <tr><td colspan="2"><h4>Button</h4></tr>
 
       <tr><td>border-style <td>:
-      <select name="button-border-style">
+      <select id="button-border-style">
         <option value="none">none</option>
         <option value="dotted">dotted</option>
         <option value="dashed">dashed</option>
@@ -53,43 +53,46 @@
         <option value="inherit">inherit</option>
       </select><br></tr>
       <tr><td>border-width <td>:
-      <select name="button-border-width">
+      <select id="button-border-width">
         <option value="thin">thin</option>
         <option value="medium">medium</option>
         <option value="thick">thick</option>
       </select><br></tr>
-      <tr><td>border-color <td>: <input type="text" name="button-border-color" value="#00cb00" size="10"><br></tr>
-      <tr><td>background-color <td>: <input type="text" name="button-background-color" value="#00ee00" size="10"><br></tr>
+      <tr><td>border-color <td>: <input type="text" id="button-border-color" value="#000000" size="10"><br></tr>
+      <tr><td>background-color <td>: <input type="text" id="button-background-color" value="#ffffff" size="10"><br></tr>
       <tr><td>font-family <td>:
-      <select name="button-font-family">
+      <select id="button-font-family">
         <option value="serif">serif</option>
         <option value="monospace">monospace</option>
         <option value="sans-serif">sans-serif</option>
         <option value="cursive">cursive</option>
         <option value="fantasy">fantasy</option>
       </select><br></tr>
-      <tr><td>font-size <td>: <input type="text" name="button-font-size" value="12" size="10"><br></tr>
-      <tr><td>font-color <td>: <input type="text" name="button-font-clor" value="#000000" size="10"><br></tr>
+      <tr><td>font-size <td>: <input type="text" id="button-font-size" value="12" size="10"><br></tr>
+      <tr><td>font-color <td>: <input type="text" id="button-font-clor" value="#000000" size="10"><br></tr>
 
       <tr><td colspan="2"><h4>Time</h4></tr>
 
       <tr><td>font-family <td>:
-      <select name="time-font-family">
+      <select id="time-font-family">
         <option value="serif">serif</option>
         <option value="monospace">monospace</option>
         <option value="sans-serif">sans-serif</option>
         <option value="cursive">cursive</option>
         <option value="fantasy">fantasy</option>
       </select><br></tr>
-      <tr><td>font-size <td>: <input type="text" name="time-font-size" value="12" size="10"><br></tr>
-      <tr><td>font-color <td>: <input type="text" name="time-font-clor" value="#000000" size="10"><br></tr>
+      <tr><td>font-size <td>: <input type="text" id="time-font-size" value="12" size="10"><br></tr>
+      <tr><td>font-color <td>: <input type="text" id="time-font-clor" value="#000000" size="10"><br></tr>
       </table>
     </div>
-    <div class="block buts">
+    <div class="block buttons">
       <center>
-      <input type="button" value="save" onclick="">
+      window height : <input type="text" id="window-height" value="100" size="10"><br>
+      window width : <input type="text" id="window-width" value="300" size="10"><br>
       <br><br><br><br><br>
-      <input type="button" value="cancel" onclick="toggle()">
+      <input type="button" value="save" onclick="updateConfig()">
+      <br><br><br><br><br>
+      <input type="button" value="close" onclick="toggle()">
     </center>
     </div>
   </body>

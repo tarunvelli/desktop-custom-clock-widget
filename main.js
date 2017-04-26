@@ -2,6 +2,7 @@ const {app, BrowserWindow, ipcMain} = require('electron')
 const json2css = require('json-2-css')
 const path = require('path')
 const url = require('url')
+const fs = require('fs')
 
 json2css("./json/config.json","./css/config.css")
 
@@ -13,7 +14,8 @@ let setwin
 
 app.on('ready', function(){
 
-  win = new BrowserWindow({width: 300, height: 100, frame:false, resizeable:true})
+  var data=JSON.parse(fs.readFileSync('./json/config.json','utf-8'))
+  win = new BrowserWindow({width: data["bounds"]["width"], height: data["bounds"]["height"], frame:false, resizeable:true})
 
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -21,7 +23,7 @@ app.on('ready', function(){
     slashes: true
   }))
 
-  setwin = new BrowserWindow({width: 550, height: 550, show: false, frame: false})
+  setwin = new BrowserWindow({width: 600, height: 550, show: false, frame: false})
 
   setwin.loadURL(url.format({
     pathname: path.join(__dirname, 'settings.html'),
@@ -38,11 +40,20 @@ app.on('ready', function(){
 
   ipcMain.on('reload', function () {
     json2css("./json/config.json","./css/config.css")
+
+    var data=JSON.parse(fs.readFileSync('./json/config.json','utf-8'))
+    var rect=win.getBounds()
+    rect["width"]=data["bounds"]["width"]
+    rect["height"]=data["bounds"]["height"]
+
+    win.setBounds(rect)
+
     win.loadURL(url.format({
       pathname: path.join(__dirname, 'index.html'),
       protocol: 'file:',
       slashes: true
     }))
+
   })
 
   win.on('closed', () => {
