@@ -8,7 +8,7 @@ Create a customized clock widget for your desktop
     # Clone this repository
     git clone https://github.com/tarunvelli/desktop-custom-clock-widget
     # Go into the repository
-    cd electron-question-paper-scrambler
+    cd desktop-custom-clock-widget
     # Install dependencies
     npm install
     # Run the app
