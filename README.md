@@ -12,7 +12,7 @@ Create a customized clock widget for your desktop
     # Install dependencies
     npm install
     # Run the app
-    electron .
+    npm start
 
 ## usage
 

@@ -1,8 +1,12 @@
 {
- "name":"CCW",
- "version":"0.1.0",
- "main":"main.js",
+ "name": "CCW",
+ "version": "0.1.0",
+ "main": "main.js",
+ "scripts": {
+  "start": "electron ."
+ },
  "dependencies": {
-   "json-2-css":">=1.0.x"
+  "json-2-css": ">=1.0.x",
+  "electron": "^1.4.1"
  }
 }
